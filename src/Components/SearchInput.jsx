@@ -1,22 +1,39 @@
-import React, { useState, useEffect } from 'react'
-import { Button, InputGroup, InputGroupAddon, Input, CardImg } from 'reactstrap'
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
-import Loader from 'react-loader-spinner'
+import React, { useState } from 'react'
+import { Button, InputGroup, InputGroupAddon, Input } from 'reactstrap'
 import '../App.css'
 
 const SearchInput = (props) => {
+    const [searchTerm, setSearchTerm] = useState("")
+
+    const handleSearchInputChanges = (e) => {
+        setSearchTerm(e.target.value)
+    }
+
+    const executeSearchFunction = (e) => {
+        e.preventDefault()
+        props.search(searchTerm)
+    }
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault()
+            props.search(searchTerm)
+        }
+    }
+
     return (
-        props.isLoading ?
-            <div className='loader'>
-                <Loader type="Circles" color="yellow" height={120} width={120} />
-            </div >
-            :
-            <InputGroup className='search'>
-                <Input placeholder="Search GIFs" />
-                <InputGroupAddon addonType="append">
-                    <Button> Search </Button>
-                </InputGroupAddon>
-            </InputGroup>
+        <InputGroup className='search'>
+            <Input
+                placeholder="Search GIFs"
+                value={searchTerm}
+                onChange={handleSearchInputChanges}
+                type='text'
+                onKeyDown={handleKeyDown}
+            />
+            <InputGroupAddon addonType="append">
+                <Button onClick={executeSearchFunction}>Search</Button>
+            </InputGroupAddon>
+        </InputGroup>
     )
 }
 
