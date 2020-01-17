@@ -66,8 +66,6 @@
 	<p><font face="albany, sans-serif"><br/>
 </font><br/>
 <br/>
-
-	</p>
 </div>
 </body>
 </html>
