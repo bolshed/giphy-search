@@ -2,7 +2,7 @@ import React from 'react'
 import { CardImg } from 'reactstrap'
 import '../App.css'
 
-const Results = (props) => {
+export default function Results(props) {
     return (
         <div className='gifsContainer'>
             {props.gifsData.map(gif => (
@@ -12,9 +12,3 @@ const Results = (props) => {
         </div>
     )
 }
-
-export default Results
-
-
-
-
