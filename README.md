@@ -2,16 +2,9 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title></title>
 	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
 	<meta name="created" content="2020-02-07T17:05:38.253193806"/>
 	<meta name="changed" content="2020-02-07T17:05:54.042968515"/>
-	<style type="text/css">
-		h2.western { font-family: "Albany", sans-serif; font-size: 16pt }
-		h2.cjk { font-family: "Noto Sans CJK SC"; font-size: 16pt }
-		h2.ctl { font-family: "Lohit Devanagari"; font-size: 16pt }
-		pre.cjk { font-family: "DejaVu Sans Mono", monospace }
-	</style>
 </head>
 <body lang="en-US" dir="ltr">
 <h1>Giphy Search 
