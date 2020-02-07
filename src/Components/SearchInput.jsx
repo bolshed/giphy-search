@@ -9,7 +9,7 @@ const SearchInput = (props) => {
         setSearchTerm(e.target.value)
     }
 
-    const executeSearchFunction = (e) => {
+    const executeSearch = (e) => {
         e.preventDefault()
         props.search(searchTerm)
     }
@@ -23,6 +23,7 @@ const SearchInput = (props) => {
 
     return (
         <InputGroup className='search'>
+
             <Input
                 placeholder="Search GIFs"
                 value={searchTerm}
@@ -30,9 +31,12 @@ const SearchInput = (props) => {
                 type='text'
                 onKeyDown={handleKeyDown}
             />
+
             <InputGroupAddon addonType="append">
-                <Button onClick={executeSearchFunction}>Search</Button>
+
+                <Button onClick={executeSearch}>Search</Button>
             </InputGroupAddon>
+
         </InputGroup>
     )
 }
